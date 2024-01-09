@@ -31,7 +31,7 @@
 
         $conexion = mysqli_connect(getenv('MYSQL_HOST'), getenv('MYSQL_USER'), getenv('MYSQL_PASSWORD'), "BASEDATOS");
 
-        $cadenaSQL = "select a.*,d.codigodis from agenda a inner JOIN distrito d ON a.distrito = d.codigodis;";
+        $cadenaSQL = "select a.*,d.codigodis from agenda a inner JOIN distrito d ON a.distrito = d.codigodis";
         $resultado = mysqli_query($conexion, $cadenaSQL);
 
         while ($fila = mysqli_fetch_object($resultado)) {
